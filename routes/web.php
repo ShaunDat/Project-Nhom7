@@ -31,7 +31,7 @@ Route::get('/add-product', [App\Http\Controllers\ProductController::class, 'crea
 
 //FE
 
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('About/About');
+Route::get('/about', [App\Http\Controllers\AboutController::class, 'about'])->name('About/About');
 /*lienhe*/
 
 Route::get('/lienhe', [App\Http\Controllers\FEController::class, 'index'])->name('lienhe');
@@ -58,3 +58,10 @@ Route::post('/Products/update/{id}', [App\Http\Controllers\ProductController::cl
 Route::get('/Products/showProduct/{id}', [App\Http\Controllers\ProductController::class,'show'])->name('Products.showProduct');
 Route::post('/Products/store', [App\Http\Controllers\ProductController::class,'store'])->name('/Products/Product');
 Route::get('/Products/delete/{id}', [App\Http\Controllers\ProductController::class,'destroy'])->name('Products.destroy');
+
+//slider
+Route::get('/home-slider', [App\Http\Controllers\SliderController::class,'index'])->name('index');
+
+Route::get('/add-slider', [App\Http\Controllers\SliderController::class,'create'])->name('create');
+
+Route::post('/store-slider', [App\Http\Controllers\SliderController::class,'store'])->name('store');
