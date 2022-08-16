@@ -46,5 +46,8 @@ class User extends Authenticatable
     public $post_fillable=['name','email','password'];
     public $primaryKey = 'id';
     public $timestamps = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
 }

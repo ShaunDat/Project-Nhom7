@@ -10,6 +10,8 @@ class CategoryController extends Controller
     {
         $category=Category::all();
         return view('Categories/category', compact("category"));
+        $categories=Category::all();
+        return view('Categories/category', compact("categories"));
     }
     public function getCreate()
     {
@@ -18,10 +20,12 @@ class CategoryController extends Controller
     //Hàm store để thêm dữ liệu
     public function postCreate(Request $request)
     {
-
         $category = new Category();
         $category->category_name = $request->category_name;
         $category->save();
+        $categories = new Category();
+        $categories->name = $request->name;
+        $categories->save();
       
        return redirect()->route('Categories/Category');;
 
@@ -36,12 +40,25 @@ class CategoryController extends Controller
         $category = Category::find($category_id);  
         $category->category_name = $request->category_name;
         $category->save();
+    }
+    public function getEditCate($id)
+    {
+       $data['cate'] = Category::find($id);
+       return view('Categories/editCategory',$data);
+    }
+    public function postEditCate(Request $request,$id)
+    {
+        $categories = Category::find($id);  
+        $categories->name = $request->name;
+        $categories->save();
         return redirect()->route('Categories/Category');
     }
     public function delete($id)
     {
         $category = Category::find($id);
         $category->delete();
+        $categories = Category::find($id);
+        $categories->delete();
         return back();
         // return redirect()->route('/Categories/Category')
         // ->with('success', 'Category deleted successfully');

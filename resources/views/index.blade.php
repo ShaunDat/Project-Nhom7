@@ -2,6 +2,11 @@
 
 @section('content')
 <div id="container">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
 <nav>  
 
 <nav>
@@ -14,6 +19,10 @@
                     
 
                     
+<<<<<<< HEAD
+=======
+
+>>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
                     <ul>
                        <li><a href="phan-mem.html">Quần short Outdoor</a></li>
                         <li><a href="phan-mem.html">Quần ống Suông</a></li>
@@ -85,7 +94,7 @@
     <li><a href="lienhe">Liện hệ</a></li>
 
 
-    <li><a href="ban-do.html">Liện hệ</a></li>
+  
 
     </ul>
 </nav><!--end:grey-->
@@ -440,6 +449,7 @@
                         </div>
             </div>
         </aside>
+<<<<<<< HEAD
             <nav>  
                 <ul id="mega-menu-3" class="mega-menu">
                     <li class="first"><a href="#" class="current">Trang chủ</a></li>
@@ -610,4 +620,7 @@
                         </div>
                     </aside>
                 </div><!--end:container-2-->
+=======
+          
+>>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
 @endsection
