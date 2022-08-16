@@ -77,4 +77,3 @@ Route::get('/edit-slider/{id}', [App\Http\Controllers\SliderController::class,'e
 Route::put('/update-slider/{id}', [App\Http\Controllers\SliderController::class,'update'])->name('update');
 
 Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('destroy');
-//user

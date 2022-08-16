@@ -10,30 +10,26 @@
         @endif
         <div class="card">
           <div class="card-header">  
-            <h4>Add slider
-              <a href="{{url('home-slider')}}" class="btn btn-danger btn-sm float-right">BACK </a>
+            <h4>Add Staff
+              <a href="{{url('home-admin')}}" class="btn btn-danger btn-sm float-right">BACK </a>
             </h4>           
           </div>
           <div class="card-body">
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
-            <form action="{{url('store-slider')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{url('store-admin')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
-                <label for="">description</label>
-                <textarea  name="description" class="form-control"></textarea>                
+                <label for="">Name STaff</label>
+                <textarea  name="name" class="form-control"></textarea>                
               </div>
 
                <div class="form-group">
-                <label for="">Title</label>
-                <input type="text" name="title" class="form-control">                
+                <label for="">Password for Staff</label>
+                <input type="text" name="password" class="form-control">                
               </div>
 
                <div class="form-group">
-                <label for="">Slider Upload Image:</label>
+                <label for="">Staff Upload Image:</label>
                 <input type="file" name="image" class="form-control">                
               </div>
 
@@ -66,8 +62,4 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
 @endsection 
-=======
-@endsection
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
