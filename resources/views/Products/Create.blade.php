@@ -10,7 +10,7 @@
       </div>
 
  
-{{-- @if ($errors->any())
+@if ($errors->any())
   <div class="alert alert-danger">
       <strong>Whoops!</strong> There were some problems with your input.<br><br>
       <ul>
@@ -19,9 +19,9 @@
           @endforeach
       </ul>
   </div>
-@endif --}}
+@endif
  
-<form action="{{ route('/Products/store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('/product/store') }}" method="POST" enctype="multipart/form-data">
   @csrf
 
    <div class="row">
@@ -53,7 +53,7 @@
               <strong>Category:</strong>
               <select name="category" class="form-control">
                   @foreach($category as $category)
-                  <option value="{{$category->id}}">{{$category->name}}</option>
+                  <option value="{{$category->category_id}}">{{$category->category_name}}</option>
                   @endforeach
                 </select>
           </div>

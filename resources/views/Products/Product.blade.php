@@ -6,7 +6,7 @@
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Product Table</h4>
-          <a href="{{asset('/Products/create')}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Add</a>
+          <a href="{{asset('/product/create')}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Add</a>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -39,19 +39,17 @@
                   <tr>
                     <td>{{$key+1}}</td>
                     <td>{{ $products->title }}</td>
-                    <td>{{ $products->price }}<a>$</a></td>
+                    <td>{{ $products->price }}<a>VND</a></td>
                     <td>{{ $products->description }}</td>
                     <td><img src="{{ asset('images/products/'.$products->image) }}" alt="" border=3 height=150 width=200></td>
-                    <td>{{ $products->Category->name }}</td>
+                    <td>{{ isset($products->category) ? $products->category->category_name: '-'}}<td>
+                    
             <td class="text-right">
-                  <form action="{{ route('Products.destroy',$products->id) }}" method="POST">
-   
-                    <a class="btn btn-info" href="{{ route('Products.showProduct',$products->id) }}">Show</a>
+              <a class="btn btn-info" href="{{ route('Products.showProduct',$products->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('Products.editProduct',$products->id) }}">Edit</a>
-   
-                    <a class="btn btn-primary" href="{{ route('Products.destroy',$products->id) }}">Delete</a>
-                </form>
+              <a class="btn btn-primary" href="{{ route('Products.editProduct',$products->id) }}">Edit</a>
+
+              <a class="btn btn-primary" href="{{ route('Products.destroy',$products->id) }}">Delete</a>
             </td>
             </tr>
               @endforeach
@@ -63,6 +61,4 @@
     </div>
   </div>
 </div>
-                    <p>Product </p>
-                    <button class="btn btn-info float-right md-4" ><a href="{{ url('/create-product') }}">Add Product</a></button>                
 @endsection

@@ -11,13 +11,15 @@ use App\Models\Category;
 class ProductController extends Controller
 {
     public function index(){
-        $arr['products'] = Product::with('Category')->get();
-        return view ('Products/Product')->with($arr);     
+        // $arr['product'] = Product::with('Category')->get();
+        // return view ('Products/Product')->with($arr);
+        $products = Product::all();
+        return view('Products/Product', compact("products"));
     }
     public function create()
     {
         $category = Category::all();
-        return view('Products/create',['category' => $category]);
+        return view('Products/Create',['category' => $category]);
     }
     public function store(Request $request)
     {
@@ -98,12 +100,12 @@ class ProductController extends Controller
                 }
                 $product->category_id = $request->category;
                 $product->save();
-                return redirect()->route('products.index')
+                return redirect()->route('/Products/Product')
                 ->with('success', 'Product updated successfully');
             } 
             else
             {
-                return redirect()->route('products.index')
+                return redirect()->route('/Products/Product')
                 ->with('Error', 'Product not update');
             }         
         }       
@@ -111,12 +113,12 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
-        $image_path = "/image/product/.$product->image";  // Value is not URL but directory file path
+        $image_path = "/images/products/.$product->image";  // Value is not URL but directory file path
         if(File::exists($image_path)) {
             File::delete($image_path);
         }
         $product->delete();
-        return redirect()->route('products.index')
+        return redirect()->route('/Products/Product')
             ->with('success', 'Product deleted successfully');
     }
 

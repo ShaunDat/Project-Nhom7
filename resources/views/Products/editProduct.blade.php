@@ -21,7 +21,7 @@
     </div>
 @endif
 
-<form action="{{ route('Products.updateProduct',$product->id) }}" method="POST"  enctype="multipart/form-data">
+<form action="{{ route('products.update',$product->id) }}" method="POST"  enctype="multipart/form-data">
     @csrf
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -58,7 +58,7 @@
                         <strong>Category:</strong>
                         <select name="category" class="form-control">
                             @foreach($category as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            <option value="{{$category->category_id}}">{{$category->name}}</option>
                             @endforeach
                           </select>
                     </div>

@@ -9,9 +9,9 @@ use App\Models\Category;
 
 class Category extends Model
 {
-    public $table ="categories";
-    public $primaryKey = 'id';
-    public $fillable = ['name'];
+    public $table ="category";
+    public $primaryKey = 'category_id';
+    public $fillable = ['category_name'];
     public $timestamps = false;
 
     public function product()
