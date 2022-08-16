@@ -10,9 +10,6 @@
       </div>
 
  
-<<<<<<< HEAD
-@if ($errors->any())
-=======
 {{-- @if ($errors->any())
 >>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
   <div class="alert alert-danger">
@@ -31,7 +28,6 @@
 @endif --}}
  
 <form action="{{ route('/Products/store') }}" method="POST" enctype="multipart/form-data">
->>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
   @csrf
 
    <div class="row">
@@ -63,11 +59,7 @@
               <strong>Category:</strong>
               <select name="category" class="form-control">
                   @foreach($category as $category)
-<<<<<<< HEAD
-                  <option value="{{$category->category_id}}">{{$category->category_name}}</option>
-=======
                   <option value="{{$category->id}}">{{$category->name}}</option>
->>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
                   @endforeach
                 </select>
           </div>

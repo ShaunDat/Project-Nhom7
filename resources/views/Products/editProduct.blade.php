@@ -21,11 +21,7 @@
     </div>
 @endif
 
-<<<<<<< HEAD
-<form action="{{ route('products.update',$product->id) }}" method="POST"  enctype="multipart/form-data">
-=======
 <form action="{{ route('Products.updateProduct',$product->id) }}" method="POST"  enctype="multipart/form-data">
->>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
     @csrf
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -62,11 +58,7 @@
                         <strong>Category:</strong>
                         <select name="category" class="form-control">
                             @foreach($category as $category)
-<<<<<<< HEAD
-                            <option value="{{$category->category_id}}">{{$category->name}}</option>
-=======
                             <option value="{{$category->id}}">{{$category->name}}</option>
->>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
                             @endforeach
                           </select>
                     </div>

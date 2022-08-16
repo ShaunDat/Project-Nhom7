@@ -2,11 +2,7 @@
 
 @section('content')
 <div id="container">
-<<<<<<< HEAD
-=======
 
-
->>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
 <nav>  
 
 <nav>
@@ -19,10 +15,6 @@
                     
 
                     
-<<<<<<< HEAD
-=======
-
->>>>>>> f18dffac5047036861e949cc9b7128d7b4b0b7ab
                     <ul>
                        <li><a href="phan-mem.html">Quần short Outdoor</a></li>
                         <li><a href="phan-mem.html">Quần ống Suông</a></li>
