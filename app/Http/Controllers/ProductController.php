@@ -7,29 +7,19 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
-use App\Models\Products;
 
 class ProductController extends Controller
 {
     public function index(){
-<<<<<<< HEAD
-        $arr['products'] = Products::with('Category')->get();
-        return view ('Products/Product')->with($arr);     
-=======
         // $arr['product'] = Product::with('Category')->get();
         // return view ('Products/Product')->with($arr);
         $products = Product::all();
         return view('Products/Product', compact("products"));
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
     }
     public function create()
     {
         $category = Category::all();
-<<<<<<< HEAD
-        return view('Products/create',['category' => $category]);
-=======
         return view('Products/Create',['category' => $category]);
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
     }
     public function store(Request $request)
     {
@@ -110,20 +100,12 @@ class ProductController extends Controller
                 }
                 $product->category_id = $request->category;
                 $product->save();
-<<<<<<< HEAD
-                return redirect()->route('products.index')
-=======
                 return redirect()->route('/Products/Product')
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
                 ->with('success', 'Product updated successfully');
             } 
             else
             {
-<<<<<<< HEAD
-                return redirect()->route('products.index')
-=======
                 return redirect()->route('/Products/Product')
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
                 ->with('Error', 'Product not update');
             }         
         }       
@@ -131,25 +113,13 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
-<<<<<<< HEAD
-        $image_path = "/image/product/.$product->image";  // Value is not URL but directory file path
-=======
         $image_path = "/images/products/.$product->image";  // Value is not URL but directory file path
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
         if(File::exists($image_path)) {
             File::delete($image_path);
         }
         $product->delete();
-<<<<<<< HEAD
-        return redirect()->route('products.index')
-            ->with('success', 'Product deleted successfully');
-    }
-
-}
-=======
         return redirect()->route('/Products/Product')
             ->with('success', 'Product deleted successfully');
     }
 
 }
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06

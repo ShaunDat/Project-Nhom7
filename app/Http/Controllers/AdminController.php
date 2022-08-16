@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -17,6 +16,11 @@ class AdminController extends Controller
         $admin = Admin::all();
 
         return view('admin.admins.index',compact('admin'));
+    }
+    public function admin()
+    {
+        // $categories=Category::all();
+        return view('Admin/adminMain');
     }
 
     
@@ -104,18 +108,3 @@ class AdminController extends Controller
    
    
 }
-
-=======
-use Illuminate\Http\Request;
-use App\Models\Category;
-class AdminController extends Controller
-{
-    public function admin()
-    {
-        // $categories=Category::all();
-        return view('Admin/adminMain');
-    }
-
-
-}
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
