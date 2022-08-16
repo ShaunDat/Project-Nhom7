@@ -13,17 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
-Auth::routes();
 
 Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-Auth::routes();
 
-Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 //Produtc
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'index'])->name('Products/Product');
@@ -65,3 +59,29 @@ Route::get('/home-slider', [App\Http\Controllers\SliderController::class,'index'
 Route::get('/add-slider', [App\Http\Controllers\SliderController::class,'create'])->name('create');
 
 Route::post('/store-slider', [App\Http\Controllers\SliderController::class,'store'])->name('store');
+
+Route::get('/edit-slider/{id}', [App\Http\Controllers\SliderController::class,'edit'])->name('edit');
+
+Route::put('/update-slider/{id}', [App\Http\Controllers\SliderController::class,'update'])->name('update');
+
+Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('destroy');
+//user
+Route::get('/userList', [App\Http\Controllers\UserController::class,'index'])->name('Admin/userList');
+Route::get('/editUser/{id}', [App\Http\Controllers\UserController::class,'getEditUser'])->name('Admin/editUser');
+Route::post('/editUser/{id}', [App\Http\Controllers\UserController::class,'postEditUser'])->name('Admin/updateUser');
+Route::get('/user/delete/{id}',[App\Http\Controllers\UserController::class,'delete'])->name('Admin/delete');;
+Route::get('/user/create', [App\Http\Controllers\UserController::class,'getUser'])->name('Admin/createUser');
+//admin
+Route::get('/home-admin', [App\Http\Controllers\AdminController::class,'index'])->name('index');
+
+Route::get('/add-admin', [App\Http\Controllers\AdminController::class,'create'])->name('create');
+
+Route::post('/store-admin',[App\Http\Controllers\AdminController::class,'store'])->name('store');
+
+Route::get('/edit-admin/{id}', [App\Http\Controllers\AdminController::class,'edit'])->name('edit');
+
+Route::put('/update-admin/{id}', [App\Http\Controllers\AdminController::class,'update'])->name('update');
+
+Route::get('/destroy-admin/{admin}', [App\Http\Controllers\AdminController::class,'destroy'])->name('destroy');
+//user
+

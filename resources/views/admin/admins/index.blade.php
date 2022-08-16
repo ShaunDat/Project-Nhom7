@@ -7,8 +7,8 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4> Slider
-                <a href="{{url('add-slider')}}" class="btn btn-primary btn-sm float-right">Add Slider </a>
+            <h4> staff List
+                <a href="{{url('add-admin')}}" class="btn btn-primary btn-sm float-right">Add New staff </a>
             </h4>
             <div class="card-body">
                 <table class="table table-bordered">
@@ -17,21 +17,22 @@
 
                        <tr>
                           <th>ID</th>
-                          <th>Title</th>                           
+                          <th>name</th>    
+                          <th>password</th>                       
                           <th>Image</th>
                           <th>Status</th> 
-                          <th>Edit Sliders</th>
+                          
                           
                       </tr>
 
                 </thead>
                 <tbody >
-                    @foreach($slider as $item)
+                    @foreach($admin as $item)
                     <tr>
-                      <td>{{ $item->id}}</td>
-                      <td>{{ $item->title }}</td>
+                      <td>{{ $item->id }}</td>
+                      <td>{{ $item->name }}</td>
                       <td>
-                          <img src="{{asset('uploads/banner/'.$item->image)}}" width="100px" alt ="Slider Image">
+                          <img src="{{asset('uploads/admin/'.$item->image)}}" width="100px" alt ="Admin  Image">
                       </td>
                       
                       <td>
@@ -43,8 +44,8 @@
                       </td>
 
                       <td>
-                             <a href="{{ url ('edit-slider/'.$item->id) }}" class="btn btn-success btn-sm">Edit</a>
-                             <a href="{{ url ('destroy-slider/'.$item->id) }}" 
+                             <a href="{{ url ('edit-admin/'.$item->id) }}" class="btn btn-success btn-sm">Edit</a>
+                             <a href="{{ url ('destroy-admin/'.$item->id) }}" 
                              onclick="return confirm('are you sure?');"
                              
                              

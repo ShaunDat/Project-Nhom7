@@ -83,8 +83,8 @@ text= "<b style='color:#00F' " +
                     <p>Languages:
                     <label>
                         <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                            <option selected value="index.html">English </option>
-                            <option value="index2.html">Vietnamese</option>
+                            <option selected value="index">English </option>
+                            <option value="index">Vietnamese</option>
                             
                         </select>
                     </label>​
@@ -143,7 +143,7 @@ text= "<b style='color:#00F' " +
                 </div><!-- /demoheader -->  
             </div><!--end:top2-->
             <div id="top3">
-                <a href="index.html"><img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="fashion" width="150" height="400" >  </a>
+                <a href="index"><img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="fashion" width="150" height="400" >  </a>
                 <form action="#" method="post" class="search_bar">
                     <fieldset>
                       <input type="text" name="search" class="search" value="Enter a keywords..." onBlur="if (this.value == ''){this.value = 'Enter a keywords...'; }" onFocus="if (this.value== 'Enter a keywords...') {this.value = ''; }" />
