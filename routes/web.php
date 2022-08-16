@@ -65,3 +65,16 @@ Route::get('/editUser/{id}', [App\Http\Controllers\UserController::class,'getEdi
 Route::post('/editUser/{id}', [App\Http\Controllers\UserController::class,'postEditUser'])->name('Admin/updateUser');
 Route::get('/user/delete/{id}',[App\Http\Controllers\UserController::class,'delete'])->name('Admin/delete');;
 Route::get('/user/create', [App\Http\Controllers\UserController::class,'getUser'])->name('Admin/createUser');
+//slider
+Route::get('/home-slider', [App\Http\Controllers\SliderController::class,'index'])->name('index');
+
+Route::get('/add-slider', [App\Http\Controllers\SliderController::class,'create'])->name('create');
+
+Route::post('/store-slider', [App\Http\Controllers\SliderController::class,'store'])->name('store');
+
+Route::get('/edit-slider/{id}', [App\Http\Controllers\SliderController::class,'edit'])->name('edit');
+
+Route::put('/update-slider/{id}', [App\Http\Controllers\SliderController::class,'update'])->name('update');
+
+Route::get('/destroy-slider/{slider}', [App\Http\Controllers\SliderController::class,'destroy'])->name('destroy');
+//user
