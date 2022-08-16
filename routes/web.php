@@ -65,6 +65,8 @@ Route::get('/editUser/{id}', [App\Http\Controllers\UserController::class,'getEdi
 Route::post('/editUser/{id}', [App\Http\Controllers\UserController::class,'postEditUser'])->name('Admin/updateUser');
 Route::get('/user/delete/{id}',[App\Http\Controllers\UserController::class,'delete'])->name('Admin/delete');;
 Route::get('/user/create', [App\Http\Controllers\UserController::class,'getUser'])->name('Admin/createUser');
+
+
 //slider
 Route::get('/home-slider', [App\Http\Controllers\SliderController::class,'index'])->name('index');
 
