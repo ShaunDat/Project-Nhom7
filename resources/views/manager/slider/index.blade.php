@@ -12,6 +12,7 @@
             </h4>
             <div class="card-body">
                 <table class="table table-bordered">
+<<<<<<< HEAD
 
                   <thead>
 
@@ -57,6 +58,21 @@
 
                 </tbody>
                 </table>
+=======
+                  
+                  <thead>
+                     
+                       <tr>
+                          <th>ID:</th>
+                          <th>Title</th>
+                          <th>Description</th>
+                          <th>Image</th>
+                          <th>Edit</th>
+                   
+                      </tr>
+                   
+                </thead>
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
             </div>
 
           </div>
@@ -64,4 +80,8 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 @endsection 
+=======
+@endsection
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06

@@ -10,7 +10,11 @@
       </div>
 
  
+<<<<<<< HEAD
 {{-- @if ($errors->any())
+=======
+@if ($errors->any())
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
   <div class="alert alert-danger">
       <strong>Whoops!</strong> There were some problems with your input.<br><br>
       <ul>
@@ -19,9 +23,15 @@
           @endforeach
       </ul>
   </div>
+<<<<<<< HEAD
 @endif --}}
  
 <form action="{{ route('/Products/store') }}" method="POST" enctype="multipart/form-data">
+=======
+@endif
+ 
+<form action="{{ route('/product/store') }}" method="POST" enctype="multipart/form-data">
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
   @csrf
 
    <div class="row">
@@ -53,7 +63,11 @@
               <strong>Category:</strong>
               <select name="category" class="form-control">
                   @foreach($category as $category)
+<<<<<<< HEAD
                   <option value="{{$category->id}}">{{$category->name}}</option>
+=======
+                  <option value="{{$category->category_id}}">{{$category->category_name}}</option>
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
                   @endforeach
                 </select>
           </div>

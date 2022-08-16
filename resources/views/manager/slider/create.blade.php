@@ -15,7 +15,11 @@
             </h4>           
           </div>
           <div class="card-body">
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
             <form action="{{url('store-slider')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
@@ -62,4 +66,8 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 @endsection 
+=======
+@endsection
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06

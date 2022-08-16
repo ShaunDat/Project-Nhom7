@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public $table = "users";
+    public $post_fillable=['name','email','password'];
+    public $primaryKey = 'id';
+    public $timestamps = false;
 }

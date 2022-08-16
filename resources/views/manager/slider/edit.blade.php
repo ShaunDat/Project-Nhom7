@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
 @extends('layouts.layoutmain')
 
   @section('content')
 
+<<<<<<< HEAD
   <div class="contaimer mt -5">
     <div class="row">
       <div class="col-md-12">
@@ -67,3 +72,17 @@
     </div>
   </div>
 @endsection 
+=======
+  <div class="row justify-content-center">
+    
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header"> cật nhật  Slider </div>
+               \\
+               
+        </div>
+      </div>
+    
+  </div>
+@endsection
+>>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
