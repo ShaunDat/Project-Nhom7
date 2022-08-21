@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 
+
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use App\Models\Admin;
@@ -95,7 +96,7 @@ class AdminController extends Controller
 
         $admin->delete(); 
         
-        return redirect()->back()->with('status','Admin Delete Successfully');
+        return redirect()->back()->with('status',' Delete logo Successfully');
         }
         return redirect()->back()->with('status','error ');
 
@@ -105,17 +106,7 @@ class AdminController extends Controller
    
 }
 
-=======
-use Illuminate\Http\Request;
-use App\Models\Category;
-class AdminController extends Controller
-{
-    public function admin()
-    {
-        // $categories=Category::all();
-        return view('Admin/adminMain');
-    }
 
 
-}
->>>>>>> 13fb811d970d9c8da99797bd3c3b66d9fea14f06
+
+

@@ -10,7 +10,7 @@
         @endif
         <div class="card">
           <div class="card-header">  
-            <h4>Edit Staff
+            <h4>Edit logo
               <a href="{{ url('home-admin') }}" class="btn btn-danger btn-sm float-right">BACK </a>
             </h4>           
           </div>
@@ -24,17 +24,17 @@
                
 
               <div class="form-group">
-                <label for="">name Staff</label>
+                <label for="">name logo</label>
                 <textarea  name="name" class="form-control">{{$admin->name}}</textarea>                
               </div>
               
               <div class="form-group">
-                <label for="">Password</label>
+                <label for="">description</label>
                 <input type="text" name="password" value="{{$admin->password}}" class="form-control">                
               </div>
 
                <div class="form-group">
-                <label for="">Staff Upload Image:</label>
+                <label for="">logo Upload Image:</label>
                 <input type="file" name="image" class="form-control">   
                 <img src="{{ asset('uploads/admin/'.$admin->image) }}" width="100px" alt ="admin Image">             
               </div>

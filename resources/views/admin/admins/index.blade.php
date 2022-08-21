@@ -7,8 +7,8 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4> staff List
-                <a href="{{url('add-admin')}}" class="btn btn-primary btn-sm float-right">Add New staff </a>
+            <h4> Logo List
+                <a href="{{url('add-admin')}}" class="btn btn-primary btn-sm float-right">Add New logo </a>
             </h4>
             <div class="card-body">
                 <table class="table table-bordered">
@@ -17,8 +17,8 @@
 
                        <tr>
                           <th>ID</th>
-                          <th>name</th>    
-                          <th>password</th>                       
+                          <th>logo</th>    
+                          <th>description</th>                       
                           <th>Image</th>
                           <th>Status</th> 
                           

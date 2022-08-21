@@ -10,7 +10,7 @@
         @endif
         <div class="card">
           <div class="card-header">  
-            <h4>Add Staff
+            <h4>Add Logo
               <a href="{{url('home-admin')}}" class="btn btn-danger btn-sm float-right">BACK </a>
             </h4>           
           </div>
@@ -19,17 +19,17 @@
             <form action="{{url('store-admin')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
-                <label for="">Name STaff</label>
+                <label for="">Name logo</label>
                 <textarea  name="name" class="form-control"></textarea>                
               </div>
 
                <div class="form-group">
-                <label for="">Password for Staff</label>
+                <label for="">description for logo</label>
                 <input type="text" name="password" class="form-control">                
               </div>
 
                <div class="form-group">
-                <label for="">Staff Upload Image:</label>
+                <label for="">logo Upload Image:</label>
                 <input type="file" name="image" class="form-control">                
               </div>
 
