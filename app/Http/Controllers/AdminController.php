@@ -19,6 +19,11 @@ class AdminController extends Controller
 
         return view('admin.admins.index',compact('admin'));
     }
+    public function admin()
+    {
+        // $categories=Category::all();
+        return view('Admin/adminMain');
+    }
 
     
     public function create()
@@ -105,8 +110,11 @@ class AdminController extends Controller
    
    
 }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658

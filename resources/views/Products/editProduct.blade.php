@@ -20,12 +20,16 @@
         </ul>
     </div>
 @endif
+<<<<<<< HEAD
 
 
 <form action="{{ route('Products.updateProduct',$product->id) }}" method="POST"  enctype="multipart/form-data">
 =======
 <form action="{{ route('products.update',$product->id) }}" method="POST"  enctype="multipart/form-data">
 
+=======
+<form action="{{ route('products.update',$product->id) }}" method="POST"  enctype="multipart/form-data">
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
     @csrf
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -62,11 +66,15 @@
                         <strong>Category:</strong>
                         <select name="category" class="form-control">
                             @foreach($category as $category)
+<<<<<<< HEAD
 
                             <option value="{{$category->id}}">{{$category->name}}</option>
 
                             <option value="{{$category->category_id}}">{{$category->name}}</option>
 
+=======
+                            <option value="{{$category->category_id}}">{{$category->name}}</option>
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
                             @endforeach
                           </select>
                     </div>

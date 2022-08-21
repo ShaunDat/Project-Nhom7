@@ -7,29 +7,38 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
-use App\Models\Products;
 
 class ProductController extends Controller
 {
     public function index(){
+<<<<<<< HEAD
 
         $arr['products'] = Products::with('Category')->get();
         return view ('Products/Product')->with($arr);     
 
+=======
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
         // $arr['product'] = Product::with('Category')->get();
         // return view ('Products/Product')->with($arr);
         $products = Product::all();
         return view('Products/Product', compact("products"));
+<<<<<<< HEAD
 
+=======
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
     }
     public function create()
     {
         $category = Category::all();
+<<<<<<< HEAD
 
         return view('Products/create',['category' => $category]);
 
         return view('Products/Create',['category' => $category]);
 
+=======
+        return view('Products/Create',['category' => $category]);
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
     }
     public function store(Request $request)
     {
@@ -110,20 +119,28 @@ class ProductController extends Controller
                 }
                 $product->category_id = $request->category;
                 $product->save();
+<<<<<<< HEAD
 
                 return redirect()->route('products.index')
 
                
 
+=======
+                return redirect()->route('/Products/Product')
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
                 ->with('success', 'Product updated successfully');
             } 
             else
             {
+<<<<<<< HEAD
 
                 return redirect()->route('products.index')
 
                 
 
+=======
+                return redirect()->route('/Products/Product')
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
                 ->with('Error', 'Product not update');
             }         
         }       
@@ -131,15 +148,20 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+<<<<<<< HEAD
 
         $image_path = "/image/product/.$product->image";  // Value is not URL but directory file path
 
         $image_path = "/images/products/.$product->image";  // Value is not URL but directory file path
 
+=======
+        $image_path = "/images/products/.$product->image";  // Value is not URL but directory file path
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
         if(File::exists($image_path)) {
             File::delete($image_path);
         }
         $product->delete();
+<<<<<<< HEAD
 
         return redirect()->route('products.index')
             ->with('success', 'Product deleted successfully');
@@ -151,3 +173,10 @@ class ProductController extends Controller
 
 
 
+=======
+        return redirect()->route('/Products/Product')
+            ->with('success', 'Product deleted successfully');
+    }
+
+}
+>>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
