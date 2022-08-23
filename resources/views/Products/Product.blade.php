@@ -6,22 +6,14 @@
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Product Table</h4>
-<<<<<<< HEAD
-
-          <a href="{{asset('/Products/create')}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Add</a>
-
           <a href="{{asset('/product/create')}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Add</a>
-
-=======
-          <a href="{{asset('/product/create')}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Add</a>
->>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">
               <thead class=" text-primary">
                 <th>
-                  name
+                  Title
                 </th>
                 <th>
                   Title
@@ -47,23 +39,8 @@
                   <tr>
                     <td>{{$key+1}}</td>
                     <td>{{ $products->title }}</td>
-<<<<<<< HEAD
-                    <td>{{ $products->price }}<a>$</a></td>
-                    <td>{{ $products->description }}</td>
-                    <td><img src="{{ asset('images/products/'.$products->image) }}" alt="" border=3 height=150 width=200></td>
-                    
-            <td class="text-right">
-                  <form action="{{ route('Products.destroy',$products->id) }}" method="POST">
-   
-                    <a class="btn btn-info" href="{{ route('Products.showProduct',$products->id) }}">Show</a>
-    
-                    <a class="btn btn-primary" href="{{ route('Products.editProduct',$products->id) }}">Edit</a>
-   
-                    <a class="btn btn-primary" href="{{ route('Products.destroy',$products->id) }}">Delete</a>
-                </form>
 
-=======
->>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
+
                     <td>{{ $products->price }}<a>VND</a></td>
                     <td>{{ $products->description }}</td>
                     <td><img src="{{ asset('images/products/'.$products->image) }}" alt="" border=3 height=150 width=200></td>
@@ -75,10 +52,6 @@
               <a class="btn btn-primary" href="{{ route('Products.editProduct',$products->id) }}">Edit</a>
 
               <a class="btn btn-primary" href="{{ route('Products.destroy',$products->id) }}">Delete</a>
-<<<<<<< HEAD
-
-=======
->>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
             </td>
             </tr>
               @endforeach
@@ -90,11 +63,4 @@
     </div>
   </div>
 </div>
-<<<<<<< HEAD
-
-                    <p>Product </p>
-                    <button class="btn btn-info float-right md-4" ><a href="{{ url('/create-product') }}">Add Product</a></button>                
-
-=======
->>>>>>> fc66f2e98782b780ee93495ae710db9d7c196658
 @endsection
