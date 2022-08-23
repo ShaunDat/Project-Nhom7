@@ -1,6 +1,7 @@
 @extends('layouts.adminLayout')
 
 @section('content')
+{{-- Edit product button --}}
 <div class="row">
     <div class="col-md-12">
       <div class="card">
@@ -9,7 +10,7 @@
             
         </div>
 
-
+{{-- Thong bao loi  --}}
 @if ($errors->any())
     <div class="alert alert-danger">
         <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -26,6 +27,7 @@
 <form action="{{ route('products.update',$product->id) }}" method="POST"  enctype="multipart/form-data">
 
     @csrf
+    {{-- List Product --}}
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">

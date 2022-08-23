@@ -1,6 +1,7 @@
 @extends('layouts.adminLayout')
 
 @section('content')
+{{-- button add product --}}
 <div class="row">
   <div class="col-md-12">
     <div class="card">
@@ -11,7 +12,7 @@
 @endif
 <form action="{{ route('/product/store') }}" method="POST" enctype="multipart/form-data">
   @csrf
-
+{{-- list add product --}}
    <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
