@@ -6,7 +6,6 @@
       <div class="card">
         <div class="card-header">
             <h2> Show Product</h2>
-            {{-- <a class="btn btn-primary" href="{{ route('/Products/store') }}"> Back</a> --}}
         </div>
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
