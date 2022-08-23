@@ -1,5 +1,5 @@
 @extends('layouts.adminLayout')
-
+{{-- Show detail product --}}
 @section('content')
 <div class="row">
     <div class="col-md-12">

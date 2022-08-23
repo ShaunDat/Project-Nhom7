@@ -35,6 +35,7 @@
                 </th>
               </thead>
               <tbody>
+                {{-- list product --}}
                 @foreach($products as $key => $products)
                   <tr>
                     <td>{{$key+1}}</td>
