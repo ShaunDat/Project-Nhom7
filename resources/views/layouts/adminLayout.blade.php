@@ -23,9 +23,6 @@
 
 <body class="">
   <div class="sidebar" data-color="orange">
-    <!--
-      Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-    -->
     <div class="logo">
       <a href="{{ asset('/admin')}}" class="simple-text logo-normal">
         Home Admin
