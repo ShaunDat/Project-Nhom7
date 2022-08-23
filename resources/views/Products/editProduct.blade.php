@@ -6,7 +6,7 @@
       <div class="card">
         <div class="card-header">
             <h2>Edit Product</h2>
-            {{-- <a class="btn btn-primary" href="{{ route('Products.Product') }}"> Back</a> --}}
+            
         </div>
 
 
