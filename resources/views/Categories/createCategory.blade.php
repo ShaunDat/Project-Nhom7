@@ -5,6 +5,7 @@
 <form action="" method="post">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     @csrf
+    {{-- Create category --}}
     <fieldset class="form-group">
         <label>Name</label>
         <input class="form-control" name="category_name" placeholder="Nhập tên category">
