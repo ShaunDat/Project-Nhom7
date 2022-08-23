@@ -5,6 +5,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
+          {{-- List category --}}
           <h4 class="card-title">Category Table</h4>
           <a href="{{asset('/create')}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Add</a>
         </div>
